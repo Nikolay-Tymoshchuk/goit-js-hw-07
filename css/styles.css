@@ -64,7 +64,7 @@
 
  .sl-wrapper .sl-image .sl-caption.pos-bottom::before, .sl-wrapper .sl-image .sl-caption.pos-bottom::after {
   content: "";
-  background-image: url(/img/trident.svg);
+  background-image: url(../img/trident.svg);
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
