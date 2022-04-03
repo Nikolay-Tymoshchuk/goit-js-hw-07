@@ -83,3 +83,9 @@
   background-position: top 0 right 10%;
 }
 
+.sl-overlay {
+  background-image: linear-gradient(to bottom,
+    #157dc780,
+    #ffff0080);
+};
+
