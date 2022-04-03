@@ -47,7 +47,7 @@
   color: gold;
   font-family: "Bowlby One", cursive;
   font-style: normal;
-  font-size: 32px;
+  font-size: 1.5rem;
 
   text-align: center;
 
@@ -64,19 +64,22 @@
 
  .sl-wrapper .sl-image .sl-caption.pos-bottom::before, .sl-wrapper .sl-image .sl-caption.pos-bottom::after {
   content: "";
-  background-image: url(./img/trident.svg);
+  background-image: url(/img/trident.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 0;
-  right: -20%;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 1;
 }
 
+.sl-wrapper .sl-image .sl-caption.pos-bottom::before {
+  background-position: top 0 left 10%;
+}
 .sl-wrapper .sl-image .sl-caption.pos-bottom::after {
-  left: 80%;
+  background-position: top 0 right 10%;
 }
 
