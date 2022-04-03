@@ -7,7 +7,8 @@ const galleryMarkupCreaton = createGalleryFromObject(galleryItems);
 galleryMainBox.insertAdjacentHTML('beforeend', galleryMarkupCreaton);
 
 function createGalleryFromObject(obj) {
-    return obj.map(({ original, preview, description}) => `<div class="gallery__item">
+    return obj.map(({ original, preview, description }) =>
+    `<div class="gallery__item">
   <a class="gallery__link" href="${original}">
     <img
       class="gallery__image"
@@ -21,10 +22,11 @@ function createGalleryFromObject(obj) {
 
 
 galleryMainBox.addEventListener('click', onGalleyItemClick);
-galleryMainBox.addEventListener('keydown', onEscapeButtonPress);
+
 
 function onGalleyItemClick(evt) {
     evt.preventDefault();
+    galleryMainBox.addEventListener('keydown', onEscapeButtonCloseModal);
 
     const targetedImageInGallery = evt.target;
     if (!targetedImageInGallery.classList.contains('gallery__image')) {
@@ -43,11 +45,13 @@ function creationOfModalImage(item) {
     instance.show();
 }
 
-function onEscapeButtonPress(evt) {
-    if (!evt.code === 'Escape') {
-        return
+function onEscapeButtonCloseModal(evt) {
+    const modalChildInBody = document.body.querySelector('.basicLightbox');
+    if (!modalChildInBody) {
+        return;
     }
-
-    const modalChildInBody = document.body.lastChild;
-    modalChildInBody.remove();
+    else if (evt.code !== 'Escape') {
+        return;
+    }
+    else modalChildInBody.remove();     
 }
