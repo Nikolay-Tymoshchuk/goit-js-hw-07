@@ -47,7 +47,9 @@
   color: gold;
   font-family: "Bowlby One", cursive;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding-left: 20%;
+  padding-right: 20%;
 
   text-align: center;
 
@@ -61,8 +63,8 @@
   z-index: 5;
 }
 
-
- .sl-wrapper .sl-image .sl-caption.pos-bottom::before, .sl-wrapper .sl-image .sl-caption.pos-bottom::after {
+.sl-wrapper .sl-image .sl-caption.pos-bottom::before,
+.sl-wrapper .sl-image .sl-caption.pos-bottom::after {
   content: "";
   background-image: url(../img/trident.svg);
   background-size: contain;
@@ -77,15 +79,12 @@
 }
 
 .sl-wrapper .sl-image .sl-caption.pos-bottom::before {
-  background-position: top 0 left 10%;
+  background-position: top 0 left 6%;
 }
 .sl-wrapper .sl-image .sl-caption.pos-bottom::after {
-  background-position: top 0 right 10%;
+  background-position: top 0 right 6%;
 }
 
 .sl-overlay {
-  background-image: linear-gradient(to bottom,
-    #157dc780,
-    #ffff0080);
-};
-
+  background-image: linear-gradient(to bottom, #157dc780, #ffff0080);
+}
